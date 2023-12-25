@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodePel">
+      <title> Track View w/ Playlist - Audio Player Example </title>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- Demo CSS (No need to include it into your project) -->
+      <link rel="stylesheet" href="./css/demo.css">
+      
+   </head>
+   <body>
+      <header class="cd__intro">
+         <h1> Track View w/ Playlist - Audio Player Example </h1>
+         <p> Track View w/ Playlist - Audio Player </p>
+         <div class="cd__action">
+            <a href="https://www.codepel.com/media-player/customizable-html5-audio-player-with-playlist" title="Back to download and tutorial page" class="cd__btn back">Back to Tutorial</a>
+         </div>
+      </header>
+      <!--$%adsense%$-->
+      <main class="cd__main">
+         <!-- Start DEMO HTML (Use the following code into your project)-->
+         <div style="text-align: center;">
+  <h1>Multiple Mode Audio Player</h1>
+
+  <p>This player has multiple modes that are all controlled with the change of a single class.<br>
+    It also supports a theme change with another class.</p>
+  
+  <p>If there is no playlist the player reverts to a track view version.</p>
+
+  <form>
+    <p>
+      <strong>Mode:</strong>
+      <span class="i-block">
+        <input id="mode2" type="radio" name="mode" value="track-view" checked><label for="mode2">Track View</label>
+      </span>
+      <span class="i-block">
+        <input id="mode3" type="radio" name="mode" value="cover-art"><label for="mode3">Cover Art</label>
+      </span>
+      <span class="i-block">
+        <input id="mode4" type="radio" name="mode" value="button-only">        <label for="mode4">Button Only</label>
+      </span>
+    </p>
+    <p>
+      <strong>Theme:</strong>
+      <span class="i-block">
+        <input id="theme1" type="radio" name="theme" value="light" checked><label for="theme1">Light</label>
+      </span>
+      <span class="i-block">
+        <input id="theme2" type="radio" name="theme" value="dark"><label for="theme2">Dark</label>
+      </span>
+    </p>
+    <p>
+      <strong>Width:</strong>
+      <span class="i-block">
+        <input id="width" type="range" name="width" min="0" max="100" step=".1" value="50" style="width:200px; height:.75em;">
+        <label for="width">50%</label>
+      </span>
+    </p>
+  </form>
+</div>
+
+<div class="player-size">
+  <div class="player-wrap track-view light" data-url="//archive.org/download/mythium/JLS_ATI.mp3" data-title="All This Is - Joe L.'s Studio" data-artist="Mythium" style="background-image: url('https://lh4.googleusercontent.com/-myR3sCeFB4k/AAAAAAAAAAI/AAAAAAAAAyA/jb6y3Wns6T8/photo.jpg');">
+    <audio preload></audio>
+    <div class="player">
+      <p class="title-text"></p>
+      <p class="artist-text ellipsis"></p>
+      <div class="controls">
+        <div class="play-pause">
+          <div class="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+              <path d="M43.3,11.1C36.6,7.1 30.3,9.6 30.3,18.6C30.3,27.6 30.3,121.3 30.3,131.7C30.3,142.1 35.6,144 43.6,139.7C51.6,134.7 133.5,87.5 141.5,83C149.3,78.5 149,72.5 141.5,68.2C134,63.8 52.2,16.4 43.3,11.1Z"/>
+            </svg>
+          </div>
+          <div class="pause-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <rect width="18%" height="90%" x="22.5%" y="5%" rx="5%" ry="5%"/>
+              <rect width="18%" height="90%" x="62.5%" y="5%" rx="5%" ry="5%"/>
+            </svg>
+          </div>
+        </div>
+        <div class="prev-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8.7 12L22 18.9V5.1L8.7 12z"/>
+            <path d="M0 12l11.3 6.9V5.1L0 12z"/>
+          </svg>
+        </div>
+        <div class="next-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.3 12L2 18.9V5.1L15.3 12z"/>
+            <path d="M24 12l-11.3 6.9V5.1L24 12z"/>
+          </svg>
+        </div>
+        <div class="playlist-button">
+          <svg viewBox="0 0 48 48">
+            <rect width="67%" height="13%" x="28%" y="19%" rx="5%" ry="5%"/>
+            <rect width="67%" height="13%" x="28%" y="45%" rx="5%" ry="5%"/>
+            <rect width="67%" height="13%" x="28%" y="71%" rx="5%" ry="5%"/>
+            <rect width="13%" height="13%" x="5%" y="19%" rx="6.5%" ry="7.5%"/>
+            <rect width="13%" height="13%" x="5%" y="45%" rx="6.5%" ry="7.5%"/>
+            <rect width="13%" height="13%" x="5%" y="71%" rx="6.5%" ry="7.5%"/>
+          </svg>
+        </div>
+        <div class="seek-wrap"><input type="range" min="0" max="100" step=".1" value="0" class="seek-bar"></div>
+        <div class="current-time">0:00:00</div>
+        <div class="duration-time">0:00:00</div>
+      </div>
+    </div>
+    <div class="big-play-pause">
+      <div class="big-play-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+          <path d="M43.3,11.1C36.6,7.1 30.3,9.6 30.3,18.6C30.3,27.6 30.3,121.3 30.3,131.7C30.3,142.1 35.6,144 43.6,139.7C51.6,134.7 133.5,87.5 141.5,83C149.3,78.5 149,72.5 141.5,68.2C134,63.8 52.2,16.4 43.3,11.1Z"/>
+        </svg>
+      </div>
+      <div class="big-pause-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+          <rect width="18%" height="90%" x="22.5%" y="5%" rx="5%" ry="5%"/>
+          <rect width="18%" height="90%" x="62.5%" y="5%" rx="5%" ry="5%"/>
+        </svg>
+      </div>
+    </div>
+    <div class="playlist-wrap">
+      <h2>Mythium</h2>
+      <ol>
+        <li><a href="//archive.org/download/mythium/JLS_ATI.mp3" data-artist="track 1">All This Is - Joe L.'s Studio</a></li>
+        <li><a href="//archive.org/download/mythium/BS_TF.mp3" data-artist="track 2">The Forsaken - Broadwing Studio (Final Mix)</a></li>
+        <li><a href="//archive.org/download/mythium/BS_ATKM.mp3" data-artist="track 3">All The King's Men - Broadwing Studio (Final Mix)</a></li>
+        <li><a href="//archive.org/download/mythium/BSFM_TF.mp3" data-artist="track 4">The Forsaken - Broadwing Studio (First Mix)</a></li>
+        <li><a href="//archive.org/download/mythium/BSFM_ATKM.mp3" data-artist="track 5">All The King's Men - Broadwing Studio (First Mix)</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+         <!-- END EDMO HTML (Happy Coding!)-->
+      </main>
+      <footer class="cd__credit">Author: Melvin Waller Jr - Distributed By: <a title="Free web design code & scripts" href="https://www.codepel.com?source=demo-page" target="_blank">CodePel</a></footer>
+      
+      <!-- Script JS -->
+      <script src="./js/script.js"></script>
+      <!--$%analytics%$-->
+   </body>
+</html>
